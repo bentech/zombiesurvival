@@ -80,7 +80,7 @@ function CACHE:BufferRequest()
 		steamid_to_player[pl:SteamID()] = pl
 	end
 
-	http.Fetch("http://www.noxiousnet.com/api/player/memberlevel?steamids="..table.concat(steamids, ","), function(body, len, headers, code)
+	http.Fetch("http://www.impulseservers.com/api/player/memberlevel?steamids="..table.concat(steamids, ","), function(body, len, headers, code)
 		local levels = string.Explode(",", body)
 		if #levels == #IDS then
 			local allplayers = player.GetAll()
@@ -153,7 +153,7 @@ concommand.Add("noxapi_forcerefresh", function(sender, command, arguments)
 
 	CACHE:Remove(steamid)
 
-	http.Fetch("http://www.noxiousnet.com/api/player/memberlevel?steamid="..steamid, function(body, len, headers, code)
+	http.Fetch("http://www.impulseservers.com/api/player/memberlevel?steamid="..steamid, function(body, len, headers, code)
 		local level = tonumber(body) or 0
 
 		if level == 1 or level == 2 then

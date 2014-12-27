@@ -357,10 +357,10 @@ end)
 -- Static values that don't need convars...
 
 -- Initial length for wave 1.
-GM.WaveOneLength = 220
+GM.WaveOneLength = 150
 
 -- For Classic Mode
-GM.WaveOneLengthClassic = 120
+GM.WaveOneLengthClassic = 70
 
 -- Add this many seconds for each additional wave.
 GM.TimeAddedPerWave = 15

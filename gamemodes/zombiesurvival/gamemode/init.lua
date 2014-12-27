@@ -88,6 +88,8 @@ AddCSLuaFile("vgui/pworth.lua")
 AddCSLuaFile("vgui/ppointshop.lua")
 AddCSLuaFile("vgui/zshealtharea.lua")
 
+AddCSLuaFile("TechMods/cl_init.lua")
+
 include("shared.lua")
 include("sv_options.lua")
 include("sv_crafts.lua")
@@ -99,6 +101,7 @@ include("sv_profiling.lua")
 include("sv_sigils.lua")
 
 include("sv_zombieescape.lua")
+include("TechMods/sv_init.lua")
 
 if file.Exists(GM.FolderName.."/gamemode/maps/"..game.GetMap()..".lua", "LUA") then
 	include("maps/"..game.GetMap()..".lua")
@@ -3716,7 +3719,7 @@ function GM:WaveStateChanged(newstate)
 				self:SetEscapeStage(ESCAPESTAGE_BOSS)
 
 				-- 2 minutes to get out with everyone spawning as bosses.
-				gamemode.Call("SetWaveEnd", CurTime() + 120)
+				gamemode.Call("SetWaveEnd", CurTime() + 70)
 
 				PrintMessage(3, "Escape sequence boss stage")
 
@@ -3742,7 +3745,7 @@ function GM:WaveStateChanged(newstate)
 
 				-- 2 minutes to escape.
 				gamemode.Call("SetWaveActive", true)
-				gamemode.Call("SetWaveEnd", CurTime() + 120)
+				gamemode.Call("SetWaveEnd", CurTime() + 70)
 				self:SetEscapeStage(ESCAPESTAGE_ESCAPE)
 
 				local curwave = self:GetWave()

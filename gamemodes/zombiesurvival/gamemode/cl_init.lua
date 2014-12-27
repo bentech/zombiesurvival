@@ -47,6 +47,8 @@ include("cl_hint.lua")
 
 include("cl_zombieescape.lua")
 
+include("TechMods/cl_init.lua")
+
 w, h = ScrW(), ScrH()
 
 MySelf = MySelf or NULL
