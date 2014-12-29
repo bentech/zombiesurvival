@@ -1,0 +1,9 @@
+"AddonInfo"
+{
+	"name"			"TechZS Addon"
+	"version"		"1.0"
+	"author_name"	"Bentech"
+	"author_url"	"http://steamcommunity.com/id/bentech"
+	"info"			"ZS extras."
+	"override"		"0"
+}
