@@ -1,4 +1,9 @@
-/* Humans gain super weapons and zombies gain boss for a limited time */
+/*		
+	Boss Mode
+	Written by Bentech
+
+    Humans gain super weapons and zombies gain boss for a limited time
+*/
 
 /*Logic to start bossmode*/
 
@@ -75,7 +80,7 @@ end
 /*Test Command*/
 local function testBossMode(pl)
 
-	if(!pl:IsAdmin())then
+	if(!pl:IsSuperAdmin() || !pl:IsUserGroup("DEVELOPER"))then
 		return
 	end
 
